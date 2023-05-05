@@ -1,6 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost","root", "1", "nmrs");
+$conn = mysqli_connect("localhost","root", "12w", "nmrs");
 if(!$conn) {
-    echo "Not connected to the databases";
+    echo "Not connected to the database";
 }
 ?>
