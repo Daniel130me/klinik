@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root", "12w", "nmrs");
+$conn = mysqli_connect("localhost","root", "", "nmrs");
 if(!$conn) {
     echo "Not connected to the database";
 }
