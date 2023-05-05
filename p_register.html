@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Registration Page</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+</head>
+<body class="hold-transition register-page">
+<div class="col-10">
+  <!-- <div> -->
+    
+  <!-- </div> -->
+
+  <div class="card mt-5">
+    <div class="card-body register-card-body">
+        <h2 class="mb-3">National Medical History Form</h2>
+      <p class="">Register a new patient</p>
+
+      <form class="form" id="patient_form" enctype="multipart/form-data">
+        <div class="row">
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>Title<span class="text-danger">*</span></label>
+            <select class="form-control" required name = "title">
+                <option value="">Select options</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Dr.">Dr.</option>
+                <option value="Prof.">Prof.</option>
+            </select>
+        </div>
+        <div class="form-group mb-3 col-md-3 col-12">
+            <label>First name<span class="text-danger">*</span></label>
+          <input type="text" class="form-control" required name = "fname" placeholder="First name">
+        </div>
+        <div class="form-group mb-3 col-md-3 col-12">
+            <label>Middle name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" required name = "mname" placeholder="Middle name">
+        </div>
+        <div class="form-group mb-3 col-md-3 col-12">
+            <label>Last name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" required name = "lname"  placeholder="Last name">
+        </div>
+        </div>
+        <div class="row">
+            <div class="form-group mb-3 col-md-6 col-12">
+                <label>Home address<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" required name = "address" placeholder="Home address">
+            </div>
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>LGA<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" required name = "lga" placeholder="LGA">
+            </div>
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>Email<span class="text-danger">*</span></label>
+                <input type="email" class="form-control" required name = "email" placeholder="Email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="row">
+                    <div class="form-group mb-3 col-md-4 col-12">
+                        <label>Gender<span class="text-danger">*</span></label>
+                        <select class="form-control" required name = "gender">
+                            <option value="">Select options</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3 col-md-4 col-12">
+                        <label>Height(ft)</label>
+                        <input type="text" class="form-control" name ="height"  placeholder="Postcode">
+                    </div>
+                    <div class="form-group mb-3 col-md-4 col-12">
+                        <label>Weight(kg)</label>
+                        <input type="text" class="form-control" name = "weight" placeholder="State of Origin">
+                    </div>
+                </div>
+        <div class="row">
+            <div class="form-group mb-3 col-md-4 col-12">
+                <label>Phone number<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" required name = "phone" placeholder="Phone number">
+            </div>
+            <div class="form-group mb-3 col-md-4 col-12">
+                <label>Postcode</label>
+                <input type="number" class="form-control" name ="postcode"  placeholder="Postcode">
+            </div>
+            <div class="form-group mb-3 col-md-4 col-12">
+                <label>State of Origin<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" required name = "origin" placeholder="State of Origin">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group mb-3 col-md-4 col-12">
+                <label>Date of birth<span class="text-danger">*</span></label>
+                <input type="date" class="form-control" required name = "dob" placeholder="Date of Birth">
+            </div>
+            <div class="form-group mb-3 col-md-4 col-12">
+                <label>Blood Group</label>
+                <select class="form-control" name = "blood">
+                    <option value="">Select blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="0+">0+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+            <div class="form-group mb-3 col-md-4 col-12">
+                <label>Genotype</label>
+                <select class="form-control" name = "genotype">
+                    <option value="">Select genotype</option>
+                    <option value="AA">AA</option>
+                    <option value="AS">AS</option>
+                    <option value="AC">AC</option>
+                    <option value="SS">SS</option>
+                    <option value="SC">SC</option>
+                    <option value="CC">CC</option>
+                </select>
+            </div>
+        </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label>Upload picture<span class="text-danger">*</span></label>
+                    <div class="input-group flex-column">
+                      <img id="specialist_p_preview_" src="" width="150" height="150">
+                        <input type="file" accept="image/*" class="" required name="photo" id="specialist_photo_" style="width: 150px; margin-top: 22px;">
+                    </div>
+                  </div>
+              </div>
+        </div>
+        <hr>
+        <h3 class="my-md-4 mb-3 mt-4">Emergency Contact</h3>
+        <div class="row">
+            <div class="form-group mb-3 col-md-3 col-12" required name = "etitle">
+                <label>Title<span class="text-danger">*</span></label>
+            <select class="form-control" required name = "etitle">
+                <option value="">Select options</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Dr.">Dr.</option>
+                <option value="Prof.">Prof.</option>
+            </select>
+        </div>
+        <div class="form-group mb-3 col-md-3 col-12">
+            <label>First name<span class="text-danger">*</span></label>
+          <input type="text" class="form-control" required name = "efname" placeholder="First name">
+        </div>
+        <div class="form-group mb-3 col-md-3 col-12">
+            <label>Middle name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" required name = "emname" placeholder="Middle name">
+        </div>
+        <div class="form-group mb-3 col-md-3 col-12">
+            <label>Last name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" required name = "elname" placeholder="Last name">
+        </div>
+        </div>
+        <div class="row">
+            <div class="form-group mb-3 col-md-9 col-12">
+                <label>Home address<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" required name = "eaddress" placeholder="Home address">
+            </div>
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>Email<span class="text-danger">*</span></label>
+                <input type="email" class="form-control" required name = "eemail" placeholder="Email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>Phone number<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" required name = "ephone" placeholder="Phone number">
+            </div>
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>Postcode</label>
+                <input type="number" class="form-control" name = "epcode" placeholder="Postcode">
+            </div>
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>State of Origin<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" required name = "eorigin" placeholder="State of Origin">
+            </div>
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>LGA<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" required name = "elga" placeholder="LGA">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>Date of birth<span class="text-danger">*</span></label>
+                <input type="date" class="form-control" required name = "edob" placeholder="Date of Birth">
+            </div>
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>Relationship<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" required name = "erelation" placeholder="Relationship">
+            </div>
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>Blood Group</label>
+                <select class="form-control" name = "eblood">
+                    <option value="">Select blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="0+">0+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>            </div>
+            <div class="form-group mb-3 col-md-3 col-12">
+                <label>Genotype</label>
+                <select class="form-control" name = "egenotype">
+                    <option value="">Select genotype</option>
+                    <option value="AA">AA</option>
+                    <option value="AS">AS</option>
+                    <option value="AC">AC</option>
+                    <option value="SS">SS</option>
+                    <option value="SC">SC</option>
+                    <option value="CC">CC</option>
+                </select>            
+            </div>
+        </div>
+        <!-- <h3 class="my-5">Medical Information</h3>
+        <div>
+        <p class="font-weight-bold">Check the condition that apply to you or any member of your immediate relative</p>
+            <input type="checkbox" id="ch1" name="mi1" value="Asthma">
+            <label class="font-weight-normal" for="ch1">Asthma</label><br>
+            <input type="checkbox" id="ch2" name="mi1" value="Cancer">
+            <label class="font-weight-normal" for="ch2">Cancer</label><br>
+            <input type="checkbox" id="ch3" name="mi1" value="Cardiac diseases">
+            <label class="font-weight-normal" for="ch3">Cardiac diseases</label><br>
+            <input type="checkbox" id="ch4" name="mi1" value="Diabetes">
+            <label class="font-weight-normal" for="ch4">Diabetes</label><br>
+            <input type="checkbox" id="ch5" name="mi1" value="Epilepsy">
+            <label class="font-weight-normal" for="ch5">Epilepsy</label><br>
+            <input type="checkbox" id="ch6" name="mi1" value="Others">
+            <label class="font-weight-normal" for="ch6">Others</label><br>
+            <textarea rows="2" cols="30"></textarea>
+        </div>
+        <div>
+            <p class="font-weight-bold">Check the symptons that you are currently experiencing:</p>
+                <input type="checkbox" id="ch7" name="mi2" value="Chest pain">
+                <label class="font-weight-normal" for="ch7">Chest pain</label><br>
+                <input type="checkbox" id="ch8" name="mi2" value="Respiratory">
+                <label class="font-weight-normal" for="ch8">Respiratory</label><br>
+                <input type="checkbox" id="ch9" name="mi2" value="Cardiac diseases">
+                <label class="font-weight-normal" for="ch9">Cardiac diseases</label><br>
+                <input type="checkbox" id="ch4" name="mi2" value="Cradiovascular">
+                <label class="font-weight-normal" for="ch10">Diabetes</label><br>
+                <input type="checkbox" id="ch5" name="mi2" value="Hematology">
+                <label class="font-weight-normal" for="ch11">Epilepsy</label><br>
+                <input type="checkbox" id="ch6" name="mi2" value="Lymphatic">
+                <label class="font-weight-normal" for="ch12">Others</label><br>
+                <input type="checkbox" id="ch6" name="mi2" value="Neurological">
+                <label class="font-weight-normal" for="ch13">Others</label><br>
+                <input type="checkbox" id="ch6" name="mi2" value="Psychiatric">
+                <label class="font-weight-normal" for="ch14">Others</label><br>
+                <input type="checkbox" id="ch6" name="mi1" value="Others">
+                <label class="font-weight-normal" for="ch15">Others</label><br>
+                <textarea rows="2" cols="30"></textarea>
+            </div> -->
+            <div class="row">
+                <div class="col-md-3 col-12 my-md-4 mb-3">
+            <button type="submit" class="btn btn-primary w-100" id="patient_form_submit">Submit</button>
+            </div>
+            <div class="col-md-3 col-12 my-md-4">
+            <button type="reset" class="btn btn-outline-primary w-100">Reset</button>
+        </div>    
+        </div>
+        </form>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="plugins/toastr/toastr.min.js"></script>
+<script src="dist/js/adminlte.js?v=12222223"></script>
+</body>
+</html>
